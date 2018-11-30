@@ -1,0 +1,8 @@
+{application, profile_locations,
+ [{description, "Восстановление географии по географии \"друзей\""},
+  {vsn, "0.1"},
+  {applications, [kernel, stdlib, lager, erlcass, jiffy, epgsql, siphash, cache]},
+  {mod, {profile_locations, []}},
+  {registered, [locations, kribrum_pgc]},
+  {env, []}
+ ]}.
