@@ -63,6 +63,7 @@ init(#{
       } = Args) ->
     case epgsql:connect(Ip, Username, Password, #{database => Database}) of
 	{ok, Connection} ->
+	    erlang:link(Connection),
 	    State = Args#{
 		      connection => Connection,
 		      statements => dict:new()
